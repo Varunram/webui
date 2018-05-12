@@ -5,14 +5,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from "material-ui/styles/index";
 import IconButton from 'material-ui/IconButton';
-import { FormLabel, FormControl, FormControlLabel, FormHelperText } from 'material-ui/Form';
+import { FormControl, FormControlLabel } from 'material-ui/Form';
 import Button from 'material-ui/Button';
 import Input, { InputLabel } from 'material-ui/Input';
 import Checkbox from 'material-ui/Checkbox';
 import Dialog, {
   DialogActions,
   DialogContent,
-  DialogContentText,
   DialogTitle,
 } from 'material-ui/Dialog';
 import SettingsIcon from 'material-ui-icons/Settings';
