@@ -153,7 +153,7 @@ class App extends Component {
         // console.log("Offers", offers);
       })
       .catch(err => {
-        this.displayError(err);
+        //this.displayError(err);
       });
   }
   fetchAssetValue(asset) {
@@ -311,12 +311,12 @@ class App extends Component {
       if (!str) {
         return [];
       }
-      
+
       var a = [];
       for (var i = 0, len = str.length; i < len; i+=2) {
         a.push(parseInt(str.substr(i,2),16));
       }
-      
+
       return a;
   }
 
@@ -654,6 +654,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <title>lit</title>
         <CssBaseline />
         <ErrorDialog
           errorMessage={this.state.errorMessage}

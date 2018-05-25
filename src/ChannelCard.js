@@ -127,7 +127,7 @@ class ChannelCard extends React.Component {
         />
       );
       payButton = (
-        <Button disabled className={classes.pay}>Pay</Button>
+        <Button disabled className={classes.pay} style={{color: 'white'}}>Pay</Button>
       );
     } else {
       menuButton = (

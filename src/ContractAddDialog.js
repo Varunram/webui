@@ -163,7 +163,7 @@ class ContractAddDialog extends React.Component {
           <Button variant="fab" onClick={this.handleClickOpen}>
             <AddIcon />
           </Button>
-          <Typography variant="caption" className={classes.caption}>
+          <Typography variant="caption" className={classes.caption} style={{'color': 'white'}}>
             Contract
           </Typography>
         </div>

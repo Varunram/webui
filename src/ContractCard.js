@@ -78,13 +78,13 @@ class ContractCard extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    
+
   }
 
   render() {
 
     const {classes} = this.props;
-   
+
     var contractStatus = ['Draft','Offered to Peer ','Offered by Peer ','Declined','Accepted','Acknowledged','Active','Settling','Closed']
 
     let menuButton, offerButton, acceptButton, declineButton, settleButton; // React components
@@ -97,7 +97,7 @@ class ContractCard extends React.Component {
           />
         </div>
       )
-    } 
+    }
 
     if (this.props.contract.Status === 2) { // I can accept or decline contracts offered to me
       acceptButton = (
@@ -107,7 +107,7 @@ class ContractCard extends React.Component {
         <Button className={classes.settle} onClick={this.handleDecline.bind(this)}>Decline</Button>
       );
     } else {
-      
+
     }
 
     if (this.props.contract.Status === 6) { // Active contracts can be settled
@@ -118,7 +118,7 @@ class ContractCard extends React.Component {
           />
         </div>
       );
-    } 
+    }
 
     menuButton = (
       <ContractMenu
@@ -131,19 +131,18 @@ class ContractCard extends React.Component {
     {
       statusLabel += this.props.contract.PeerIdx;
     }
-      
+
     console.log(this.props.contract);
 
     return (
       <div className={classes.cardBox}>
-        <Card raised={true} className={classes.card}>
+        <Card raised={true} className={classes.card} style={{backgroundColor: 'transparent'}}>
           <CardHeader title={"Contract " + this.props.contract.Idx}
                       action={menuButton}/>
-          <CardContent>
+                    <CardContent style={{color: 'white', fontFamily: 'Roboto, sans-serif'}}>
             Status: <Chip label={statusLabel} />
           </CardContent>
-          <CardActions className={classes.action} disableActionSpacing>
-          
+          <CardActions className={classes.action} disableActionSpacing style={{backgroundColor: 'transparent'}}>
             {offerButton}
             {settleButton}
             {acceptButton}

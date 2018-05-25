@@ -77,7 +77,7 @@ class ChannelAddDialog extends PopUpDialog {
           <Button variant="fab" color="secondary" onClick={this.handleClickOpen.bind(this)}>
             <AddIcon/>
           </Button>
-          <Typography variant="caption" className={classes.caption}>
+          <Typography variant="caption" className={classes.caption} style={{color: 'white'}}>
             Channel
           </Typography>
         </div>

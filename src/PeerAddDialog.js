@@ -57,12 +57,12 @@ class PeerAddDialog extends PopUpDialog {
   render() {
     const {classes} = this.props;
     return (
-      <div>
+      <div style={{'background-color': 'transparent'}}>
         <div className={classes.buttonBox}>
           <Button variant="fab" color="primary" onClick={this.handleClickOpen.bind(this)}>
             <AddIcon />
           </Button>
-          <Typography variant="caption" className={classes.caption}>
+          <Typography variant="caption" className={classes.caption} style={{'color': 'white'}}>
             Peer Connection
           </Typography>
         </div>

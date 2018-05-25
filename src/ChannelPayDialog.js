@@ -61,7 +61,7 @@ class ChannelPayDialog extends PopUpDialog {
 
     return (
       <div>
-        <Button onClick={this.handleClickOpen.bind(this)}>Pay</Button>
+        <Button onClick={this.handleClickOpen.bind(this)} style={{color: 'white'}}>Pay</Button>
         <Dialog
           open={this.state.open}
           onClose={this.handleClose.bind(this)}

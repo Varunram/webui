@@ -51,7 +51,7 @@ class BalanceSendDialog extends PopUpDialog {
 
     return (
       <div>
-        <Button onClick={this.handleClickOpen.bind(this)}>Send</Button>
+        <Button onClick={this.handleClickOpen.bind(this)} style={{color: 'white'}}>Send</Button>
         <Dialog
           open={this.state.open}
           onClose={this.handleClose.bind(this)}

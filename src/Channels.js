@@ -72,7 +72,7 @@ const ChannelGroup = withStyles(channelGroupStyles)((props) => {
   // add the + button for adding an additional channel to this Peer
   disabledChannels.push(
     <Zoom in key="AddDialog">
-      <Grid item xs={3} className={classes.addButtonBox} style={{background: '#EFEFEF'}}>
+      <Grid item xs={3} className={classes.addButtonBox} style={{background: 'transparent'}}>
         <ChannelAddDialog
           peerIndex={props.peerIndex}
           handleAddSubmit={props.handleChannelAddSubmit}

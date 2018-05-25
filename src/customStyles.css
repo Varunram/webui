@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Overpass+Mono:400,700');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
 
 .connected {
 	background: green !important;
@@ -14,18 +15,35 @@ div[class^="MuiGrid-typeContainer-"], div[class*=" MuiGrid-typeContainer-"] {
 }
 
 body {
-	background: bisque !important;
+	background: black !important;
 }
 
 div[class^="Channels-peerGroup-"], div[class*="Channels-peerGroup-"]{
-	background: beige !important;
+	background: transparent !important;
 	margin-bottom: -7px;
 }
 
 div[class^="Contracts-peerGroup-"], div[class*="Contracts-peerGroup-"] {
-	background: azure !important;
+	background: transparent;
 }
 
 div[class^="ChannelCard-cardDisabled-"], div[class*="ChannelCard-cardDisabled-"] {
-	background: gainsboro !important;
+	background: transparent;
+}
+
+header {
+	background-color: transparent !important;
+}
+
+button[class^="MuiIconButton-root-"], button[class*="MuiIconButton-root-"] {
+	color: white !important;
+}
+
+span[class^="MuiCardHeader-title-"], span[class*="MuiCardHeader-title-"] {
+	color: white !important;
+	font-size: 60px;
+}
+
+div[class^="MuiGrid-typeItem-"], div[class*="MuiGrid-typeItem-"] {
+	background: transparent !important;
 }

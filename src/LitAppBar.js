@@ -4,10 +4,9 @@ import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
-import Blockies from 'react-blockies';
-import Avatar from 'material-ui/Avatar';
 import SettingsDialog from './SettingsDialog.js';
 import './customStyles.css';
+import ProfileDialog from './ProfileDialog'
 
 const styles = theme => ({
   root: {
@@ -32,19 +31,22 @@ function LitAppBar(props) {
         position="static"
         color={props.settings.appBarColorPrimary ? "primary" : "secondary"}
       >
-        <Toolbar>
-          <Avatar className={classes.avatar}>
-            <Blockies
-              seed={props.address}
-              size={10}
-              scale={3}
-              color="#FF5733"
-              bgColor="#FFC300"
-            />
-          </Avatar>
-          <Typography variant="title" color="inherit" className={classes.flex}>
-            Lit Node {props.address}
+        <Toolbar style={{'background': 'transparent'}}>
+        </Toolbar>
+      </AppBar>
+
+      <AppBar
+        position="fixed"
+        color={props.settings.appBarColorPrimary ? "primary" : "secondary"}
+      >
+        <Toolbar style={{'background': 'black'}}>
+          <Typography variant="title" color="inherit" className={classes.flex} style={{'font-family': 'Architects Daughter, cursive'}}>
+            lit - Lightning Network Node software
           </Typography>
+          <ProfileDialog
+            settings={props.settings}
+            address={props.address}
+            />
         <SettingsDialog
           settings={props.settings}
           handleSettingsSubmit={props.handleSettingsSubmit}
